@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29709.97
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EncoLyze", "EncoLyze.csproj", "{CADE6664-4408-4553-846C-9A44CECE1949}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CADE6664-4408-4553-846C-9A44CECE1949}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CADE6664-4408-4553-846C-9A44CECE1949}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CADE6664-4408-4553-846C-9A44CECE1949}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CADE6664-4408-4553-846C-9A44CECE1949}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CFAAF6D1-6849-409D-8052-BBC48F358377}
+	EndGlobalSection
+EndGlobal
