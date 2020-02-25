@@ -9,7 +9,7 @@ namespace EncoLyze
     class Controler
     {
         private object _parent = null;
-        private Value _implement = new Value("Not implemented");
+        private EncodingData _implement = new EncodingData("Not implemented");
         public object Parent { get => _parent; set => _parent = value; }
 
         public Controler(object parent)
@@ -28,14 +28,45 @@ namespace EncoLyze
         }
         public void ToHex(string value)
         {
-            ValueToData(_implement);
+            ValueToData(Modal.HexEncode(value));
         }
         public void FromHex(string value)
         {
-            ValueToData(_implement);
+            ValueToData(Modal.HexDecode(value));
         }
 
-        private void ValueToData(Value data)
+        public void StringToCharCode(string value)
+        {
+            ValueToData(Modal.StringToCharCode(value));
+        }
+
+        public void CharCodeToString(string value)
+        {
+            ValueToData(Modal.CharCodeToString(value));
+        }
+
+        // Rigth click //
+        public string ToUpperCase(string text)
+        {
+            return Modal.ToUpperCase(text);
+        }
+
+        public string ToLowercase(string text)
+        {
+            return Modal.ToLowercase(text);
+        }
+
+        public string InverseCase(string text)
+        {
+            return Modal.InverseCase(text);
+        }
+
+        public void UpdateText(string text)
+        {
+            ValueToData(Modal.StringToValue(text));
+        }
+
+        private void ValueToData(EncodingData data)
         {
             (this.Parent as Form1).SetRtbText(data.text);
             (this.Parent as Form1).SetLength(data.length);

@@ -53,6 +53,8 @@
     </Compile>
     <Compile Include="Library\Base64.cs" />
     <Compile Include="Library\Encolib.cs" />
+    <Compile Include="Library\Hexa.cs" />
+    <Compile Include="Library\TextEditor.cs" />
     <Compile Include="Modal.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

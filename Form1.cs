@@ -21,8 +21,17 @@ namespace EncoLyze
             cstlblLineNumber = this.lblLineNumber.Text;
             cstlblNumberNum = this.lblnumberNum.Text;
             cstlblWordNum = this.lblWordNumber.Text;
+            this.lsbOptions.DoubleClick += (obj,_) => { this.btnApply.PerformClick(); };
+            this.rtbText.TextChanged += EventTextChanged;
+            this.toUPPERToolStripMenuItem.Click += ConvertToUpperText;
             this.btnApply.Click += ApplyChange;
 
+        }
+
+        private void EventTextChanged(object sender,EventArgs e)
+        {
+            control.UpdateText(this.rtbText.Text);
+            this.rtbText.SelectionStart = this.rtbText.TextLength;
         }
 
         private void ApplyChange(object sender, EventArgs e)
@@ -46,11 +55,21 @@ namespace EncoLyze
                 case 3:
                     control.FromHex(this.rtbText.Text);
                     break;
+                case 4:
+                    control.CharCodeToString(this.rtbText.Text);
+                    break;
+                case 5:
+                    control.StringToCharCode(this.rtbText.Text);
+                    break;
                 default:
                     break;
             }
         }
 
+        private void ConvertToUpperText(object sender,EventArgs e)
+        {
+            this.rtbText.Text = this.control.ToUpperCase(this.rtbText.Text);
+        }
 
         public void SetRtbText(string text)
         {
@@ -61,6 +80,7 @@ namespace EncoLyze
         {
             this.lblLength.Text = $"{cstlblLength}{value}";
         }
+
 
         public void SetNumberNum(long value)
         {
